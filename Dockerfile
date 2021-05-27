@@ -1,3 +1,6 @@
-FROM tomcat:8.0.20-jre8
-# Dummy text to test 
-COPY webapp/target/*.war /usr/local/tomcat/webapps/myapp.war
+FROM ubuntu
+MAINTAINER Bizdom Technologies
+RUN sudo apt-get update
+RUN sudo apt install git maven -y
+RUN sudo apt-get install openjdk-8-jdk
+RUN mkdir -p /opt/tomcat8
